@@ -1,0 +1,64 @@
+@import url("https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+
+body,
+h1,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: Galmuri11;
+  font-weight: 600;
+  background-color: #dce9ed;
+}
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+.title {
+  color: #24560d;
+  margin-top: -60px;
+}
+
+.menu-wrapper {
+}
+
+.menu-items {
+  margin-top: 3em;
+}
+
+.menu-items li {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.menu-items li + li {
+  margin-top: 1.5em;
+}
+
+.menu-item {
+  display: block;
+  padding: 1.3em;
+  transition: all 0.3s;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+  background-color: #282828;
+  border-radius: 20px;
+  color: #b0ff70;
+}
