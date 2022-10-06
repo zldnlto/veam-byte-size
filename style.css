@@ -32,9 +32,6 @@ body {
   margin-top: -60px;
 }
 
-.menu-wrapper {
-}
-
 .menu-items {
   margin-top: 3em;
 }
@@ -43,7 +40,6 @@ body {
   max-width: 500px;
   margin: 0 auto;
   background-color: transparent;
-  border-radius: 10px;
 }
 
 .menu-items li + li {
@@ -54,11 +50,11 @@ body {
   display: block;
   padding: 1.3em;
   transition: all 0.3s;
+  border-radius: 20px;
 }
 
 .menu-item:hover {
   font-weight: bold;
   background-color: #282828;
-  border-radius: 20px;
   color: #b0ff70;
 }
