@@ -1,0 +1,120 @@
+body,
+ul,
+p,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #ddd;
+  color: #333;
+}
+
+.price-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.price-title {
+  font-size: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.price-items {
+  display: flex;
+  margin: 0 -20px;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  flex-basis: 33.3333333%;
+  margin: 0 20px;
+}
+
+.price-item.most {
+  margin: -20px 20px;
+}
+
+.price-item-header,
+.price-item-footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.price-item-header h2 {
+  margin-bottom: 15px;
+}
+
+.price-item-contents {
+  padding: 20px;
+  background-color: #efefef;
+}
+
+.price-item-footer {
+  margin-top: auto;
+}
+
+.list {
+  line-height: 1.4;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.list-item p span {
+  display: block;
+  color: #999;
+}
+
+.list-item-icon {
+  flex-shrink: 0;
+  margin-right: 0.4em;
+  margin-top: 2px;
+  color: green;
+  fill: currentColor;
+}
+
+.tag {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag span {
+  margin: 0 0.2em;
+  font-size: 0.5em;
+}
+
+.button {
+  background-color: dodgerblue;
+  color: #fff;
+  display: block;
+  padding: 20px 0;
+  transition: all 0.4s;
+}
+
+.button.red {
+  background-color: orangered;
+}
+
+.button:hover {
+  background-color: darkblue;
+}
