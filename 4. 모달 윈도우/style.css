@@ -1,0 +1,139 @@
+@keyframes fly {
+  0% {
+    transform: translateY(5%);
+  }
+
+  100% {
+    transform: rotate(-10deg) translateY(-50%);
+  }
+}
+
+body,
+h2,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  color: #999;
+  font-family: "arial";
+  line-height: 1.4;
+}
+
+.cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
+}
+
+.modal:target .window {
+  transform: translateY(0);
+  opacity: 1;
+}
+.window {
+  display: flex;
+  background-color: #fff;
+  flex-basis: 820px;
+  background-color: #222;
+  opacity: 0;
+  transform: translateY(-150%);
+  transition: all 2s;
+}
+
+.window-contents {
+  flex-grow: 1;
+  padding: 32px;
+}
+
+.window-contents h2 {
+  position: relative;
+  color: crimson;
+  margin-bottom: 16px;
+}
+.window-contents h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+  margin-left: -32px;
+  background-color: currentColor;
+}
+
+.window-contents p + p {
+  margin-top: 1em;
+}
+.window-sidebar {
+  background-color: #191919;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-sidebar-cover {
+  max-width: 150px;
+  animation-name: fly;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.window-sidebar-bottom {
+  margin-top: auto;
+}
+
+.button {
+  background-color: dodgerblue;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 8px 0;
+  border: 1px solid dodgerblue;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+}
+
+.button.line {
+  background-color: transparent;
+  color: dodgerblue;
+}
+
+.button + .button {
+  margin-top: 10px;
+}
