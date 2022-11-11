@@ -1,0 +1,85 @@
+/* reset */
+body,
+p {
+  margin: 0;
+}
+
+h1 {
+  font: inherit;
+  margin: 0;
+}
+
+:root {
+  line-height: 1.5;
+  font-family: "arial";
+}
+
+img {
+  display: block;
+  /* 혹은 vertical-align: top; */
+}
+
+/* Design */
+body {
+  background-color: #efefef;
+}
+
+.container {
+  display: table;
+  background-color: purple;
+  color: white;
+  max-width: 960px;
+  margin: 100px auto;
+}
+
+.cover {
+  display: table-cell;
+  width: 60%;
+}
+
+.cover-photo {
+  width: 100%;
+}
+
+.contents {
+  display: table-cell;
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 40px;
+}
+
+.contents span,
+.contents p {
+  opacity: 0.5;
+}
+
+.contents h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 720px) {
+  .container {
+    position: relative;
+    margin: 0;
+  }
+  .container,
+  .cover,
+  .contents {
+    display: block;
+    width: auto;
+  }
+
+  .contents {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    text-align: right;
+    background-color: inherit;
+  }
+}
